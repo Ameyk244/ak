@@ -1,0 +1,206 @@
+/* Base styles for the entire application */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Roboto', sans-serif; /* Modern font */
+  background-color: #e0f7fa; /* Light cyan background for a clean look */
+  color: #333; /* Darker text color for readability */
+}
+
+/* Main container */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header styling */
+.app-header {
+  background: rgba(0, 77, 153, 0.7); /* Dark blue header with transparency */
+  backdrop-filter: blur(10px); /* Blur effect for glassmorphism */
+  color: #ffffff;
+  padding: 1.5rem; /* Increased padding */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  text-align: center;
+  animation: fadeIn 1s ease-out; /* Fade-in effect */
+}
+
+/* Header text */
+.app-header h1 {
+  margin: 0;
+  font-size: 2.5rem; /* Larger font size */
+  font-weight: bold; /* Bold text */
+}
+
+/* Main content area */
+.app-main {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: slideIn 1s ease-out; /* Slide-in effect */
+}
+
+/* Footer styling */
+.app-footer {
+  background: rgba(0, 77, 153, 0.7); /* Dark blue footer with transparency */
+  backdrop-filter: blur(10px); /* Blur effect for glassmorphism */
+  color: #ffffff;
+  padding: 1rem;
+  border-top: 1px solid #003366; /* Darker border */
+  text-align: center;
+  font-size: 0.9rem; /* Slightly smaller font size */
+  animation: fadeIn 1s ease-out 0.5s; /* Fade-in effect with delay */
+}
+
+/* Social media icons container */
+.social-media-icons {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem; /* Space between icons */
+  animation: bounceIn 1s ease-out; /* Bounce-in effect */
+}
+
+/* Individual social media icons */
+.social-media-icons a {
+  color: #db1212;
+  font-size: 1.5rem; /* Larger icon size */
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out; /* Smooth transitions */
+}
+
+.social-media-icons a:hover {
+  color: #e0f7fa; /* Color change on hover */
+  transform: scale(1.2); /* Slight zoom effect */
+}
+
+/* Container for animated images */
+.animated-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem; /* Space between images */
+  margin-top: 2rem; /* Margin from top */
+}
+
+/* Individual animated images */
+.animated-image {
+  width: 200px; /* Fixed width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Rounded corners */
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Blur effect for glassmorphism */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+
+.animated-image:hover {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Button container */
+.button-container {
+  display: flex;
+  gap: 1rem; /* Space between buttons */
+  margin-top: 1.5rem;
+}
+
+/* Button styling */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: rgba(0, 123, 255, 0.7); /* Transparent button background */
+  backdrop-filter: blur(5px); /* Blur effect for glassmorphism */
+  border-radius: 0.5rem; /* Rounded corners */
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+  background-color: rgba(0, 86, 179, 0.7); /* Darker shade on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Sensor page styling */
+.sensor-page {
+  background-color: rgba(255, 255, 255, 0.5); /* Transparent white background */
+  backdrop-filter: blur(10px); /* Blur effect for glassmorphism */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  padding: 2rem; /* Padding inside the container */
+  margin: 1rem; /* Margin around the container */
+}
+
+/* Sensor details styling */
+.sensor-details {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Map container */
+.map-container {
+  width: 100%;
+  max-width: 1200px; /* Adjust to desired max-width */
+  height: 400px; /* Set height */
+  margin: 22 auto; /* Center the map */
+}
+
+.map {
+  width: 100%;
+  height: 80%;
+}
+
+
+/* Heading styles */
+h2 {
+  color: #004d99; /* Dark blue color for headings */
+}
+
+h3 {
+  color: #007bff; /* Lighter blue color for subheadings */
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes bounceIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

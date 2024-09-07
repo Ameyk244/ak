@@ -1,0 +1,142 @@
+/* Apply ochre and green gradient background to the entire page */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #6676d3, #5fd3e7); /* Ochre to green gradient */
+}
+
+/* General Container Styling */
+.sensor-data-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  background: #ffffff; /* Solid white background for the container */
+  position: relative;
+  animation: fadeIn 1s ease-in;
+
+  /* Adding golden and black frame */
+  border: 5px solid ; /* Black border */
+  box-shadow: 0 0 0 5px #FFD700; /* Golden border effect */
+  padding: 2rem; /* Adjust padding to ensure the content doesn’t touch the golden frame */
+}
+
+/* Data Cards Styling */
+.data-cards {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 2rem;
+}
+
+.data-card {
+  background: #c9e453;
+  border-radius: 12px;
+  padding: 1rem;
+  margin: 0.5rem;
+  box-shadow: 0 8px 16px rgba(50, 139, 23, 0.15);
+  flex: 1;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.data-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(26, 146, 155, 0.3);
+}
+
+.data-card h3 {
+  margin: 0;
+  color: #333;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.data-card p {
+  font-size: 1.6rem;
+  color: #b62727;
+}
+
+/* Control Buttons Styling */
+.control-buttons {
+  margin-top: 1.5rem;
+}
+
+.control-buttons button {
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.75rem 1.5rem;
+  margin: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
+.control-buttons button:hover {
+  background-color: #005bb5;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.control-buttons button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Image Frame Styling */
+.image-frame {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  animation: slideIn 1s ease-in;
+}
+
+.sensor-image {
+  width: 100px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sensor-image:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.95);
+  }
+  to {
+    transform: scale(1);
+  }
+}
